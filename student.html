@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+    <link rel="stylesheet" href="students.css">
+
+<script>
+    function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        var passwordIcon = document.getElementById("show-password-icon");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            passwordIcon.classList.remove("fa-eye");
+            passwordIcon.classList.add("fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            passwordIcon.classList.remove("fa-eye-slash");
+            passwordIcon.classList.add("fa-eye");
+        }
+    }
+</script>
+</head>
+<body>
+    <header>
+        <h1>UniversitY Of Professional Studies</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#admission">Admission Form</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="admission">
+            <h2>Student Admission Form</h2>
+            <form id="admission-form">
+                <!-- Personal Information -->
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="email" id="Email" name="Email" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <label for="Contact">Contact</label>
+                     <input type="contact" id="Contact" name="Contact" placeholder="Enter Your Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="Gender">Gender</label>
+                    <p><select name="Gender" id="Gender"></p>
+                            <option></option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>others</option>
+                    </select>
+                </div>
+                <!-- Add more fields for other personal information -->
+
+                <!-- Academic Information -->
+                <div class="form-group">
+                    <label for="previousSchool">Previous School/College:</label>
+                    <input type="text" id="previousSchool" name="previousSchool" required>
+                </div>
+                <div class="form-group">
+                    <label for="previousGrade">Previous Grade/Level:</label>
+                    <input type="text" id="previousGrade" name="previousGrade" required>
+                </div>
+                <!-- Add more fields for academic information -->
+
+                <!-- Additional Information -->
+                <div class="form-group">
+                    <label for="extracurricular">Extracurricular Activities:</label>
+                    <textarea id="extracurricular" name="extracurricular" rows="4"></textarea>
+                </div>
+                <!-- Add more fields for additional information -->
+
+                <!-- Upload Documents -->
+                <div class="form-group">
+                    <label for="documents">Upload Documents:</label>
+                    <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx">
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">I agree to the terms and conditions.</label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 University Admission Application</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
